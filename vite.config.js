@@ -2,5 +2,5 @@ export default {
   build: {
     sourcemap: true,
   },
-  base: './',
+  base: './montmorillon-1840/',
 }
