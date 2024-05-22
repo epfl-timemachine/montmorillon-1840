@@ -103,7 +103,7 @@ const vectorLayer = new VectorLayer({
 
 // Define a new tile source from the tiles folder
 const tileSource = new XYZ({
-  url: import.meta.env.BASE_URL + 'tiles/{z}/{x}/{y}.png',
+  url: 'https://geo-timemachine.epfl.ch/geoserver/www/tilesets/montmorillon-1840/{z}/{x}/{y}.png',
   minZoom: 11,
   maxZoom: 21,
   extent: extent,
