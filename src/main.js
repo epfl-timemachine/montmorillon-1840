@@ -110,7 +110,7 @@ const tileSource = new XYZ({
   maxZoom: 21,
   extent: extent,
   transition: 0,
-  attributions: '© <a href="https://archives-deux-sevres-vienne.fr/ark:/28387/vtac12d0108cfa39369" target="_blank">Archives dépertementales des Deux-Sèvres</a>'
+  attributions: '© <a href="https://archives-deux-sevres-vienne.fr/ark:/28387/vtac12d0108cfa39369" target="_blank">Archives dépertementales des Deux-Sèvres et Vienne</a>'
 });
 
 tileSource.on('tileloadstart', function (e) {
