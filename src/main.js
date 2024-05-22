@@ -24,6 +24,8 @@ import Style from 'ol/style/Style';
 import OSM from 'ol/source/OSM';
 import VectorSource from 'ol/source/Vector';
 import XYZ from 'ol/source/XYZ';
+// OpenLayers controls
+import {Attribution, defaults as defaultControls} from 'ol/control.js';
 
 // Define extent
 const extent = [5852008.3243, 92896.8792, 5846640.1080, 99813.8944];
@@ -127,6 +129,12 @@ const view = new View({
   zoom: 12
 });
 
+// Create a new attribution control
+const attribution = new Attribution({
+  collapsible: true,
+  collapsed: true,
+});
+
 // Create a map instance
 const map = new Map({
   target: 'map', // The id of the div element where the map will be rendered
@@ -135,7 +143,8 @@ const map = new Map({
     tileLayer, // Add the tile layer to the map
     vectorLayer // Add the layer to the map
   ],
-  view: view
+  view: view,
+  controls: defaultControls({attribution: false}).extend([attribution]),
 });
 
 vectorSource.once('change', function (e) {
