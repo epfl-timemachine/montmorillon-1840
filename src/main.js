@@ -36,7 +36,7 @@ const OSMLayer = new TileLayer({
 
 // Define a new vector source and vector layer with the content of the assets/merged.geojson file
 const vectorSource = new VectorSource({
-  url: '/merged.geojson',
+  url: import.meta.env.BASE_URL + 'merged.geojson',
   format: new GeoJSON({ transition: 0 }),
   attributions: '© <a href="https://www.epfl.ch/schools/cdh/time-machine-unit/" target="_blank">EPFL Time Machine Unit</a>'
 })
@@ -103,7 +103,7 @@ const vectorLayer = new VectorLayer({
 
 // Define a new tile source from the tiles folder
 const tileSource = new XYZ({
-  url: '/tiles/{z}/{x}/{y}.png',
+  url: import.meta.env.BASE_URL + 'tiles/{z}/{x}/{y}.png',
   minZoom: 11,
   maxZoom: 21,
   extent: extent,
